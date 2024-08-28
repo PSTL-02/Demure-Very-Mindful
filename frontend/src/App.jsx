@@ -5,7 +5,7 @@ import './App.css'
 // Import Pages
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import Signup from './pages/Signup'
+import Signup from './pages/SignUp'
 import Login from './pages/Login'
 import SingleWorkout from './pages/SingleProject';
 
