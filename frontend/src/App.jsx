@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Signup from './pages/SignUp'
 import Login from './pages/Login'
-import SingleWorkout from './pages/SingleProject';
+import SingleProject from './pages/SingleProject';
 
 const App =() => {
   const {user} = useAuthContext();
@@ -20,7 +20,7 @@ const App =() => {
           <Routes>
             {/* If we have a user show home, else go to login: */}
             <Route path='/' element={user ? <Home/> : <Navigate to="/login"/>}/>
-            <Route path='/:id' element={user ? <SingleWorkout/> : <Navigate to="/login"/>}/>
+            <Route path='/:id' element={user ? <SingleProject/> : <Navigate to="/login"/>}/>
             {/* If we don't have a user show login, if we do have a user got to home  */}
             <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
             {/* If we don't have a user show signup, if we do show home */}
