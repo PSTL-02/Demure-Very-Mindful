@@ -71,7 +71,7 @@ const ProjectForm = () => {
         />
 
         <label>Type:</label>
-        <input>Web Design</input>
+        <p>Web Design</p>
 
         <label>Author:</label>
         <input

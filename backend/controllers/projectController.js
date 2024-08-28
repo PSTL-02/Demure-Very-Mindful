@@ -1,4 +1,4 @@
-// const Project = require('');
+const Project = require('../models/projectModel');
 const mongoose = require('mongoose')
 
 
@@ -12,7 +12,7 @@ const getProjects = async (req, res) => {
         res.status(200).json(projects)
     } catch (error) {
         console.error(error);
-        res.status(500).josn({error: 'Internal server error'})
+        res.status(500).json({error: 'Internal server error'})
     }
 }
 
