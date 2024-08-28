@@ -10,7 +10,7 @@ const projectSchema = new Schema({
     },
     title: {
         type: String,
-        required
+        required: true
     },
     type: {
         type: String,
