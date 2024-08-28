@@ -14,7 +14,7 @@ const Navbar = () => {
     <header>
         <div className='container'>
             <Link to='/'>
-            <img src="frontend\public\images\demure-high-resolution-logo-black-transparent.png" alt="our-logo"/>
+            <img src="/images/demure-high-resolution-logo-black-transparent.png" alt="our-logo"/>
             </Link>
             <nav>
               {user && <div>
