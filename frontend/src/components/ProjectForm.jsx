@@ -63,53 +63,70 @@ const ProjectForm = () => {
     <form className='create' onSubmit={handleSubmit}>
         <h3>Add A New Project</h3>
 
-        <label>Title:</label>
-        <input
-            type="text"
-            onChange={(e) => setTitle(e.target.value)}
-            value={title}
-        />
-
-        <label>Type:</label>
-        <p>Web Design</p>
-
-        <label>Author:</label>
-        <input
-            type="text"
-            onChange={(e) => setAuthor(e.target.value)}
-            value={author}
-        />
-
-        <label>Small Description:</label>
-        <input
-            type="text"
-            onChange={(e) => setSDescription(e.target.value)}
-            value={sDescription}
-        />
-
-        <label>Big Description:</label>
-        <input
-            type="text"
-            onChange={(e) => setBDescription(e.target.value)}
-            value={bDescription}
-        />
-
-        <label> Upload Image: </label>
-        <input type="file" accept='image/*' onChange={(e) => setImage(e.target.files[0])}/>
-
-        <label>Socials:</label>
-        <div>
-        <FaInstagram />
-        <FaFacebook />
-        <FaLinkedin />
+        <div className='form-inputs'>
+            <label>Title:</label>
+            <input
+                type="text"
+                onChange={(e) => setTitle(e.target.value)}
+                value={title}
+            />
         </div>
-
-        <label>Link to Portfolio:</label>
-        <input
-            type="text"
-            onChange={(e) => setLink(e.target.value)}
-            value={link}
-        />
+        
+        <div className='form-inputs'>
+            <label>Type:</label>
+            <p>Web Design</p>
+        </div>
+        
+        <div className='form-inputs'>
+            <label>Author:</label>
+            <input
+                type="text"
+                onChange={(e) => setAuthor(e.target.value)}
+                value={author}
+            />
+        </div>
+        
+        <div className='form-inputs'>
+            <label>Small Description:</label>
+            <input
+                type="text"
+                onChange={(e) => setSDescription(e.target.value)}
+                value={sDescription}
+            />
+        </div>
+        
+        <div className='form-inputs'>
+            <label>Big Description:</label>
+            <input
+                type="text"
+                onChange={(e) => setBDescription(e.target.value)}
+                value={bDescription}
+            />
+        </div>
+        
+        <div className='form-inputs'>
+            <label> Upload Image: </label>
+            <input type="file" accept='image/*' onChange={(e) => setImage(e.target.files[0])}/>
+        </div>
+        
+        <div className='form-inputs'>
+            <label>Socials:</label>
+            <div id='form-social-icons'>
+            <FaInstagram />
+            <FaFacebook />
+            <FaLinkedin />
+            </div>
+        </div>
+        
+        <div className='form-inputs'>
+            <label>Link to Portfolio:</label>
+            <input
+                type="text"
+                onChange={(e) => setLink(e.target.value)}
+                value={link}
+            />
+        </div>
+        
 
         <button>Add Project</button>
         {error && <div className='error'>{error}</div>}

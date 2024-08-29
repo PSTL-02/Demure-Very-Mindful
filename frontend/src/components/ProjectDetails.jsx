@@ -1,15 +1,15 @@
-import {useState} from 'react'
+import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
 
 // import custom context hook
 import { useProjectsContext } from '../hooks/useProjectsContext';
 
-import {formatDistanceToNow} from 'date-fns'
+import {formatDistanceToNow} from 'date-fns';
 
 // importing icons
-import {TrashFill} from 'react-bootstrap-icons'
-import { PencilSquare } from 'react-bootstrap-icons';
+import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL
 
@@ -46,7 +46,7 @@ const ProjectDetails = ({project}) => {
 
       if (response.status === 201) {
         const newComment = response.data;
-        const updatedComments = [...project.comments, newComment]
+        const updatedComments = [...project.comments, newComment];
         const updatedProject = {...project, comments: updatedComments};
 
         dispatch({type: 'UPDATE_PROJECT', payload: updatedProject});
@@ -154,19 +154,19 @@ const ProjectDetails = ({project}) => {
           {project.image && (
             <img className='project-image' src={`${baseURL}/public/uploads/${project.image}`} alt={project.title}/>
           )}
-            <h4> {project.title} </h4>
-          <p> <strong> Small Description: </strong> {project.sDescription} </p>
-          <p> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} </p>
+            <h4 id='project-title'> {project.title} </h4>
+          <p>{project.sDescription} </p>
           <p> <strong> Created By: </strong> {project.user_id ? getEmailCharactersBeforeAtSymbol(project.user_id) : 'Unknown'} </p>
+          <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
         <div className='btn-icons'>
             <button className='read-more-btn' onClick={handleNavigate}> Read More </button>
             {project.user_id === user_id && (
-                <>
+                
                     <div className='icon-cont'>
-                    <span onClick={handleDelete}> <TrashFill className='icons'/> </span>
-                    <span onClick={handleEdit}> <PencilSquare className='icons'/> </span>
+                    <span onClick={handleDelete}> <FaTrashAlt className='icons' /> </span>
+                    <span onClick={handleEdit}> <FaEdit className='icons' /> </span>
                     </div>
-                </>
+                
                 )}
           </div>
           
