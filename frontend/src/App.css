@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lalezar&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar starts */
+
+
+/* Navbar ends */
+
+/* Header starts */
+.header-cont {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 25px;
+    justify-content: center;
+    margin-top: 20px;
+
+    header {
+        font-size: 30px;
+        font-family: "Lalezar", system-ui;
+        color: #9F4170;
+    }
+
+    #project-filter-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        position: absolute;
+        left: 0;
+        margin-left: 3%;
+    }
+    .filter-button {
+        border-radius: 20px;
+        padding: 10px;
+        border: none;
+        background-color: #9F4170;
+        color: white;
+        font-family: "Inter", sans-serif;
+    }
+}
+/* header ends */
+
+
+.home-posts {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+
+    /* Project form */
+    .create {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        background-color: #FBF3FF;
+        font-family: "Inter", sans-serif;
+        padding: 30px;
+        border-radius: 20px;
+        gap: 10px;
+        h3 {
+            font-size: 25px;
+            font-family: "Lalezar", system-ui;
+            color: #9F4170;
+            font-weight: lighter;
+        }
+        .form-inputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #8E7AB3;
+            width: 100%;
+            font-size: 16px;
+        }
+        button {
+            border-radius: 20px;
+            border: none;
+            background-color: #9F4170;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            width: 80%;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: #c7538d;
+        }
+        #form-social-icons {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        svg {
+            font-size: 30px;
+            color:#8E7AB3
+        }
+        
+    }
+
+/* Project posts */
+    .projects{
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        .project-details{
+            width: 50%;
+            .show-comments-btn{
+                border-radius: 20px;
+                color: #9F4170;
+                background-color: white;
+                border: #9F4170 2px solid;
+                padding: 8px;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+        .project-content {
+            width: 100%;
+            background-color: #FBF3FF;
+            padding: 20px;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+            border-radius: 20px;
+            #project-title {
+                font-family: "Lalezar", system-ui;
+                font-size: 22px;
+                color: #9F4170;
+                font-weight: lighter;
+            }
+            .project-image {
+                width: 100%;
+            }
+            
+            #time-created {
+                color: #8E7AB3;
+            }
+            
+            .btn-icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .read-more-btn{
+                border-radius: 20px;
+                padding: 10px;
+                background-color: #9F4170;
+                border: none;
+                font-family: "Inter", sans-serif;
+                text-align: center;
+                color: white;
+                margin-top: 10px;
+                width: 60%;
+                font-size: 16px;
+            }
+            
+            .icon-cont {
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .icons {
+                font-size: 20px;
+                color: black;
+            }
+        }
+        
+    }
+
+/* End of homepage styling */
+
+
+
+}

@@ -30,10 +30,18 @@ const Home = () => {
     }
 
     return (
-        <div className="home">
+        <>
+        <div className="header-cont">
+            <div id="project-filter-btns">
+            <button onClick={handleMyProjects} className="filter-button"> My Projects </button>
+            <button onClick={handleAllProjects} className="filter-button"> All Projects </button>
+            </div>
+        <header>2402 Portfolio Work</header>
+        </div>
+        
+        <div className="home-posts">
+            <ProjectForm/>
             <div className="projects">
-                <button onClick={handleMyProjects} className="filter-button"> My Projects </button>
-                <button onClick={handleAllProjects} className="filter-button"> All Projects </button>
                 {myProjects ? (projects && projects.map((project) => {
                     const user = JSON.parse(localStorage.getItem('user'))
                     const user_id = user.email
@@ -49,8 +57,8 @@ const Home = () => {
                 })
             )}
             </div>
-            <ProjectForm/>
         </div>
+        </>
     )
 }
 
