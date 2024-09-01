@@ -1,18 +1,40 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import {useProjectsContext} from '../hooks/useProjectsContext'
+import axios from 'axios'
+import {formatDistanceToNow} from 'date-fns';
+// icon imports
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
-import {format} from 'date-fns'
-import axios from "axios";
 
 const SingleProject = () => {
 
-    const baseURL = import.meta.env.VITE_BASE_URL
+    const baseURL = import.meta.env.VITE_API_BASE_URL
 
     const navigate = useNavigate();
+    // set state for a single workout:
+    const [project, setProject] = useState(null)
+    // set loading state:
+    const [loading, setLoading] = useState(true)
 
-    // come back to this
-    // const response = await axios.get(`${baseURL}/api/projects/:id`)
+    // get id from the URl via useParams
+    const {id} = useParams()
+
+     // useEffect
+     useEffect(() => {
+        axios.get(`${baseURL}/api/projects/${id}`)
+              .then((res) => {
+                  console.log(res.data)
+                  setProject(res.data)
+                  setLoading(false)
+              })
+              .catch((error) => {
+                  console.log(error)
+              })
+      },[id])
+
+      if (!project) {
+        return <div>Project not found</div>;
+      }
+
 
     // master return
   return (
@@ -20,26 +42,27 @@ const SingleProject = () => {
 
         <div className='backbtn-title'>
             <button onClick={() => navigate(-1)} className='back-button'> Back </button>
-            <h2> Project Title </h2>
+            <h2> {project.title} </h2>
         </div>
 
         <div className='single-project-content'>
 
             <div className='project-image-link'>
-                <img src='' alt="photo of project here" />
-                <a> Link To Portfolio URL </a>
+                <img src={`${baseURL}/public/uploads/${project.image}`} alt="photo of project here" />
+                {project.link && <a href={project.link} target="_blank"> {project.link} </a>}     
             </div>
 
             <div className='project-details'>
                 <h3> Web Design </h3>
 
-                <h4> Project Authors: </h4>
-                <p> author </p>
+                <h4> Project Author(s): </h4>
+                <p> {project.author} </p>
 
                 {/* in depth description of project */}
-                <p> desc </p>
+                <p> {project.bDescription} </p>
 
-                <h4> Date Uploaded/Created:</h4> <p> hehe </p>
+                <h4> Uploaded/Created:</h4> 
+                <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
 
                 <h4> Socials: </h4>
                 <div className='social-icons'>
