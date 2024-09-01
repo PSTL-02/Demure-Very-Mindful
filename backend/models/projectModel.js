@@ -14,7 +14,7 @@ const projectSchema = new Schema({
     },
     type: {
         type: String,
-        required: true
+        default: "Web Design"
     },
     author: {
         type: String,
