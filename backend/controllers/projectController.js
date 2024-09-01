@@ -27,7 +27,7 @@ const getProject = async (req, res) => {
     try {
         const project = await Project.findById(id).populate({
             path: 'comments',
-            model: 'Comments'
+            model: 'Comment'
         })
 
         if(!project) {

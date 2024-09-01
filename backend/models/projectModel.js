@@ -34,7 +34,7 @@ const projectSchema = new Schema({
         type: String,
         default: null
     },
-    links: {
+    link: {
         type: String,
     },
     comments: [

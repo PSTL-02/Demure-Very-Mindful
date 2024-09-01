@@ -261,6 +261,7 @@ nav {
             width: 100px;
             margin-top: 10px;
             font-size: 16px;
+            cursor: pointer;
         }
 
         h2 {
@@ -274,25 +275,34 @@ nav {
     .single-project-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20%;
+        gap: 10%;
 
         .project-image-link {
             display: flex;
             flex-direction: column;
-            border: 2px solid red;
             font-family: "Inter", sans-serif;
 
             img {
-                border: 1px solid purple;
-                height: 300px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            a {
+                margin: 10px;
+                font-family: "Lalezar", system-ui;
+                color: #9F4170;
             }
         }
 
         .project-details {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 15px;
-            border: 1px solid blue;
+            padding: 20px;
+            height: 70%;
+            border-radius: 8px;
             background-color: #FBF3FF;
 
             p {
@@ -300,13 +310,20 @@ nav {
             }
 
             h3 {
-                font-size: 1.7em;
+                font-size: 2em;
                 font-family: "Lalezar", system-ui;
             }
 
             h4 {
-                font-size: 1.3em;
+                font-size: 1.5em;
                 font-family: "Lalezar", system-ui;
+            }
+
+            .social-icons {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 2em;
             }
         }
     }
