@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios'
+import {formatDistanceToNow} from 'date-fns';
+
 // icon imports
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
@@ -13,9 +15,6 @@ const SingleProject = () => {
     const [project, setProject] = useState(null)
     // set loading state:
     const [loading, setLoading] = useState(true)
-
-
-
     // get id from the URl via useParams
     const {id} = useParams()
 
