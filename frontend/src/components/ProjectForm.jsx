@@ -24,7 +24,7 @@ const ProjectForm = () => {
         const user = JSON.parse(localStorage.getItem('user'));
         const user_id = user.email
 
-        const formData = new FormData();
+        const formData = new FormData()
         formData.append('title', title);
         formData.append('author', author);
         formData.append('sDescription', sDescription);
@@ -45,7 +45,7 @@ const ProjectForm = () => {
                 headers : {
                     'Content-Type': 'multipart/form-data'
                 }
-            });
+            })
             setTitle('');
             setAuthor('');
             setSDescription('');

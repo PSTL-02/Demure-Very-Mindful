@@ -152,7 +152,7 @@ const ProjectDetails = ({project}) => {
         <>
         <div className='project-content'> 
           {project.image && (
-            <img className='project-image' src={`${baseURL}/public/uploads/${project.image}`} alt={project.title}/>
+            <img className='project-image' src={`${baseURL}/public/uploads/${project.image}`} alt="Project"/>
           )}
             <h4 id='project-title'> {project.title} </h4>
           <p>{project.sDescription} </p>

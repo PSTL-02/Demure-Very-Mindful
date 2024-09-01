@@ -78,6 +78,7 @@ nav {
         left: 0;
         margin-left: 3%;
     }
+
     .filter-button {
         border-radius: 20px;
         padding: 10px;
@@ -87,6 +88,7 @@ nav {
         font-family: "Inter", sans-serif;
     }
 }
+
 /* header ends */
 
 
@@ -108,17 +110,20 @@ nav {
         padding: 30px;
         border-radius: 20px;
         gap: 10px;
+
         h3 {
             font-size: 25px;
             font-family: "Lalezar", system-ui;
             color: #9F4170;
             font-weight: lighter;
         }
+
         .form-inputs {
             width: 100%;
             display: flex;
             flex-direction: column;
         }
+
         input {
             border-radius: 20px;
             padding: 10px;
@@ -127,6 +132,7 @@ nav {
             width: 100%;
             font-size: 16px;
         }
+
         button {
             border-radius: 20px;
             border: none;
@@ -137,30 +143,35 @@ nav {
             margin-top: 20px;
             width: 80%;
         }
+
         button:hover {
             cursor: pointer;
             background-color: #c7538d;
         }
+
         #form-social-icons {
             display: flex;
             flex-direction: row;
             gap: 10px;
         }
+
         svg {
             font-size: 30px;
-            color:#8E7AB3
+            color: #8E7AB3
         }
-        
+
     }
 
-/* Project posts */
-    .projects{
+    /* Project posts */
+    .projects {
         width: 60%;
         display: flex;
         flex-wrap: wrap;
-        .project-details{
+
+        .project-details {
             width: 50%;
-            .show-comments-btn{
+
+            .show-comments-btn {
                 border-radius: 20px;
                 color: #9F4170;
                 background-color: white;
@@ -170,6 +181,7 @@ nav {
                 margin-top: 10px;
             }
         }
+
         .project-content {
             width: 100%;
             background-color: #FBF3FF;
@@ -177,27 +189,29 @@ nav {
             font-family: "Inter", sans-serif;
             text-align: center;
             border-radius: 20px;
+
             #project-title {
                 font-family: "Lalezar", system-ui;
                 font-size: 22px;
                 color: #9F4170;
                 font-weight: lighter;
             }
+
             .project-image {
                 width: 100%;
             }
-            
+
             #time-created {
                 color: #8E7AB3;
             }
-            
+
             .btn-icons {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
             }
-            
-            .read-more-btn{
+
+            .read-more-btn {
                 border-radius: 20px;
                 padding: 10px;
                 background-color: #9F4170;
@@ -209,22 +223,97 @@ nav {
                 width: 60%;
                 font-size: 16px;
             }
-            
+
             .icon-cont {
                 display: flex;
                 flex-direction: row;
             }
-            
+
             .icons {
                 font-size: 20px;
                 color: black;
             }
         }
-        
+
     }
 
-/* End of homepage styling */
+    /* End of homepage styling */
+}
 
 
+/* Single Page Styling */
+.single-page {
+    margin: 30px;
 
+    .backbtn-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .back-button {
+            border-radius: 20px;
+            padding: 10px;
+            background-color: #9F4170;
+            border: none;
+            font-family: "Inter", sans-serif;
+            text-align: center;
+            color: white;
+            width: 100px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-family: "Lalezar", system-ui;
+            color: #9F4170;
+            font-size: 34px;
+            margin-left: 35%;
+        }
+    }
+
+    .single-project-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20%;
+
+        .project-image-link {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid red;
+            font-family: "Inter", sans-serif;
+
+            img {
+                border: 1px solid purple;
+                height: 300px;
+            }
+        }
+
+        .project-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid blue;
+            background-color: #FBF3FF;
+
+            p {
+                font-family: "Inter", sans-serif;
+            }
+
+            h3 {
+                font-size: 1.7em;
+                font-family: "Lalezar", system-ui;
+            }
+
+            h4 {
+                font-size: 1.3em;
+                font-family: "Lalezar", system-ui;
+            }
+        }
+    }
+}
+
+/* end of single page styling */
+
+.login, .signup {
+    margin: 30px;
 }
