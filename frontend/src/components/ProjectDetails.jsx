@@ -154,26 +154,25 @@ const ProjectDetails = ({project}) => {
           {project.image && (
             <img className='project-image' src={`${baseURL}/public/uploads/${project.image}`} alt="Project"/>
           )}
+            <div className='details'>
             <h4 id='project-title'> {project.title} </h4>
-          <p>{project.sDescription} </p>
-          <p> <strong> Created By: </strong> {project.user_id ? getEmailCharactersBeforeAtSymbol(project.user_id) : 'Unknown'} </p>
-          <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
-        <div className='btn-icons'>
-            <button className='read-more-btn' onClick={handleNavigate}> Read More </button>
-            {project.user_id === user_id && (
-                
-                    <div className='icon-cont'>
-                    <span onClick={handleDelete}> <FaTrashAlt className='icons' /> </span>
-                    <span onClick={handleEdit}> <FaEdit className='icons' /> </span>
-                    </div>
-                
-                )}
+            <p>{project.sDescription} </p>
+            <p> <strong> Created By: </strong> {project.author} </p>
+            <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
+            <div className='btn-icons'>
+              <button className='read-more-btn' onClick={handleNavigate}> Read More </button>
+              {project.user_id === user_id && (
+                  
+                      <div className='icon-cont'>
+                      <FaTrashAlt className='icons' onClick={handleDelete} />
+                      <FaEdit className='icons' onClick={handleEdit} />
+                      </div>
+                  
+                  )}
+            </div>
           </div>
-          
-        </div>
-        </>
-      )}
-      <button className='show-comments-btn'
+
+          <button className='show-comments-btn'
         onClick={() => {
           setShowComments(!showComments)
           console.log(project.comments[0]);
@@ -189,7 +188,7 @@ const ProjectDetails = ({project}) => {
               <div key={project._id} className='comment'>
                 <h5> {getEmailCharactersBeforeAtSymbol(comment.user_id)} </h5>
                 <p> {comment.text} </p>
-                <span> 
+                <span className='comment-time'> 
                   <strong> Posted: </strong> {formatDistanceToNow(new Date(comment.createdAt), {includeSeconds: true})}{' '}ago 
                 </span>
               </div>
@@ -206,6 +205,12 @@ const ProjectDetails = ({project}) => {
           </div>
         </>
       )}
+          
+          
+        </div>
+        </>
+      )}
+      
 
     </div>
   )
