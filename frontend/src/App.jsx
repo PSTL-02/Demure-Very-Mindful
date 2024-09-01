@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Signup from './pages/SignUp'
 import Login from './pages/Login'
 import SingleProject from './pages/SingleProject';
+import Footer from './components/Footer'
 
 const App =() => {
   const {user} = useAuthContext();
@@ -27,6 +28,7 @@ const App =() => {
             <Route path='/signup' element={!user ? <Signup/> : <Navigate to="/"/>}/>
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </div>
   )

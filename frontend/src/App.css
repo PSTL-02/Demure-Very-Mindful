@@ -10,7 +10,7 @@
 /* Navbar starts */
 nav {
     display: flex;
-    align-items: center;
+
   }
   
   nav a {
@@ -20,7 +20,13 @@ nav {
   .container img {
     height: 7%;
     width: 7%;
+  }
 
+  .userInt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
   
   form.signup, form.login {
@@ -54,6 +60,17 @@ nav {
   }
 
 /* Navbar ends */
+
+/* Footer start */
+footer{
+    height: 50px;
+    background-color: #FBF3FF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* Footer end */
 
 /* Header starts */
 .header-cont {
