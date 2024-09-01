@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios'
 import {formatDistanceToNow} from 'date-fns';
+
 // icon imports
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
@@ -14,7 +15,6 @@ const SingleProject = () => {
     const [project, setProject] = useState(null)
     // set loading state:
     const [loading, setLoading] = useState(true)
-
     // get id from the URl via useParams
     const {id} = useParams()
 
@@ -62,8 +62,6 @@ const SingleProject = () => {
                 <p> {project.bDescription} </p>
 
                 <h4> Uploaded/Created:</h4> 
-                <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
-
                 <h4> Socials: </h4>
                 <div className='social-icons'>
                     <FaInstagram/>
