@@ -8,7 +8,50 @@
 }
 
 /* Navbar starts */
+nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    margin-left: 10px;
+  }
 
+  .container img {
+    height: 7%;
+    width: 7%;
+
+  }
+  
+  form.signup, form.login {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FBF3FF;
+    border-radius: 8px;
+  }
+
+  header {
+    background: #FBF3FF;
+  }
+  
+  header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .Logout-btn{
+    border-radius: 20px;
+        padding: 10px;
+        border: none;
+        background-color: #9F4170;
+        color: white;
+        font-family: "Inter", sans-serif;
+  }
 
 /* Navbar ends */
 
