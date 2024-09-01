@@ -17,7 +17,7 @@ const Navbar = () => {
             <img src="/images/demure-high-resolution-logo-black-transparent.png" alt="our-logo"/>
             </Link>
             <nav>
-              {user && <div>
+              {user && <div className=' userInt'>
                 <span>{user.email}</span>
                 <button onClick={handleClick} className='Logout-btn'>Logout</button>
               </div>}
