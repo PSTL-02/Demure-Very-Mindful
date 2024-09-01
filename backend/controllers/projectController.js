@@ -44,18 +44,17 @@ const getProject = async (req, res) => {
 // Create Project
 const createProject = async (req, res) => {
     const {title, type, author, sDescription, bDescription, socials, link, user_id} = req.body
-    
     const imageFileName = req.file ? req.file.filename : null
- 
+
     try {
         const project = await Project.create({title,
-            type,
-            author,
-            sDescription,
-            bDescription,
-            image: imageFileName,
-            socials,
-            link,
+            type, 
+            author, 
+            sDescription, 
+            bDescription, 
+            image :imageFileName,
+            socials, 
+            link, 
             user_id})
         res.status(200).json(project)
     } catch (error) {
