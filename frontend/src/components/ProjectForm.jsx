@@ -74,7 +74,7 @@ const ProjectForm = () => {
         
         <div className='form-inputs'>
             <label>Type:</label>
-            <p>Web Design</p>
+            <h4>Web Design</h4>
         </div>
         
         <div className='form-inputs'>
