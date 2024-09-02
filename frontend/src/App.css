@@ -17,6 +17,29 @@ body {
     backdrop-filter: blur(5px);
 }
 
+button {
+    font-family: "Space Grotesk", sans-serif;
+    border-radius: 10px;
+    border: 2px solid #1f1f1f;
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    width: 80%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid #af4fb8;
+    background-color: #FBF3FF;
+    font-weight: bold;
+    color: #af4fb8;
+    transition: all 0.3s ease;
+}
+
 /* Navbar starts */
 nav {
     display: flex;
@@ -61,12 +84,7 @@ nav {
   }
   
   .Logout-btn{
-    border-radius: 20px;
-        padding: 10px;
-        border: none;
-        background-color: #9F4170;
-        color: white;
-        font-family: "Inter", sans-serif;
+    font-size: 12px;
   }
 
 /* Navbar ends */
@@ -106,15 +124,11 @@ footer{
         position: absolute;
         left: 0;
         margin-left: 3%;
-    }
 
-    .filter-button {
-        border-radius: 20px;
-        padding: 10px;
-        border: none;
-        background-color: #9F4170;
-        color: white;
-        font-family: "Inter", sans-serif;
+        .filter-button {
+            width: 150px;
+            font-size: 16px;
+        }
     }
 }
 
@@ -126,6 +140,7 @@ footer{
     align-items: center;
     flex-direction: column;
     width: 100%;
+
     .home-posts {
         display: flex;
         flex-direction: row;
@@ -199,20 +214,13 @@ footer{
             
                         .btn-icons {
                             display: flex;
-                            flex-direction: row;
-                            justify-content: space-evenly;
+                            justify-content: center;
                             align-items: center;
             
                             .read-more-btn {
-                                border-radius: 20px;
-                                padding: 10px;
-                                background-color: #9F4170;
-                                border: none;
-                                font-family: "Inter", sans-serif;
                                 text-align: center;
-                                color: white;
-                                width: 80%;
                                 font-size: 16px;
+                                width: 150px;
                                 margin-right: 10px;
                             }
                 
@@ -221,28 +229,24 @@ footer{
                                 flex-direction: row;
                                 justify-content: center;
                                 align-items: center;
-                                gap: 20px;
+                                gap: 10px;
+
                                 .icons {
-                                    font-size: 25px;
-                                    transition: all 0.7 ease;
+                                    font-size: 23px;
+                                    color: #1f1f1f;
+                                    transition: all 0.3 ease;
                                 }
                                 .icons:hover {
                                     cursor: pointer;
                                     color: #9F4170;
-                                    transition: all 0.7 ease;
+                                    transition: all 0.3 ease;
                                 }
                             }
-                
             
                         }
             
                     }
                     .show-comments-btn {
-                        border-radius: 20px;
-                        color: #9F4170;
-                        background-color: transparent;
-                        border: #9F4170 2px solid;
-                        padding: 8px;
                         font-size: 14px;
                         margin-bottom: 10px;
                     }
@@ -276,24 +280,16 @@ footer{
                         flex-direction: column;
                         gap: 10px;
                         padding-bottom: 20px;
+                        
                         input {
-                            border-radius: 20px;
-                            background-color: #8E7AB3;
-                            border: none;
+                            border-radius: 8px;
+                            border: 1px solid black;
                             padding: 8px;
                             color: white;
-                            width: 100%;
-                        }
-                        input::placeholder {
-                            color: #c5adf3;
                         }
                         .post-btn {
-                            border-radius: 20px;
-                            background-color: #9F4170;
-                            color: white;
-                            padding: 8px;
-                            border: none;
-                            width: 100px;
+                            font-size: 18px;
+                            width: 70px;
                         }
                     }
                     
@@ -337,7 +333,7 @@ footer{
             font-family: "Space Grotesk", sans-serif;
         }
 
-        button {
+        /* button {
             font-family: "Space Grotesk", sans-serif;
             border-radius: 10px;
             border: 2px solid #1f1f1f;
@@ -358,7 +354,7 @@ footer{
             font-weight: bold;
             color: #af4fb8;
             transition: all 0.3s ease;
-        }
+        } */
 
         #form-social-icons {
             display: flex;
