@@ -139,6 +139,8 @@ footer{
             box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
             -webkit-box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
             -moz-box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
+            width: 20%;
+            height: 700px;
         }
 
          /* Project posts */
@@ -146,10 +148,17 @@ footer{
             width: 70%;
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            gap: 20px;        
+            gap: 20px;   
+            margin-bottom: 30px;     
     
             .project-details {
                 width: 100%;
+
+                .edit-modal {
+                    background-color: #FBF3FF;
+                    padding: 10px;
+                    border-radius: 20px;
+                }
 
                 .project-content {
                     width: 100%;
@@ -193,7 +202,6 @@ footer{
                             flex-direction: row;
                             justify-content: space-evenly;
                             align-items: center;
-                            margin-top: 10px;
             
                             .read-more-btn {
                                 border-radius: 20px;
@@ -214,17 +222,17 @@ footer{
                                 justify-content: center;
                                 align-items: center;
                                 gap: 20px;
+                                .icons {
+                                    font-size: 25px;
+                                    transition: all 0.7 ease;
+                                }
+                                .icons:hover {
+                                    cursor: pointer;
+                                    color: #9F4170;
+                                    transition: all 0.7 ease;
+                                }
                             }
                 
-                            .icons {
-                                font-size: 25px;
-                                transition: all 0.7 ease;
-                            }
-                            .icons:hover {
-                                cursor: pointer;
-                                color: #9F4170;
-                                transition: all 0.7 ease;
-                            }
             
                         }
             
@@ -261,7 +269,7 @@ footer{
                         }
                     }
                     .add-comment {
-                        width: 80%;
+                        width: 90%;
                         display: flex;
                         align-items: flex-start;
                         margin-left: 15px;
@@ -274,7 +282,7 @@ footer{
                             border: none;
                             padding: 8px;
                             color: white;
-                            width: 390px;
+                            width: 100%;
                         }
                         input::placeholder {
                             color: #c5adf3;
