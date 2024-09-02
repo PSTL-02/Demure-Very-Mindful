@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Space+Grotesk:wght@300..700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Cherish&family=Homemade+Apple&display=swap');
+ 
 
 * {
     padding: 0;
@@ -57,9 +57,9 @@ nav {
 
   .userInt{
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 10px;
+    font-family: "Space Grotesk", sans-serif;
   }
   
   form.signup, form.login {
@@ -91,12 +91,14 @@ nav {
 
 /* Footer start */
 footer{
-    height: 50px;
+    padding: 10px;
+    height: 60px;
     background-color: #FBF3FF;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Space Grotesk", sans-serif;
 }
 /* Footer end */
 
@@ -110,11 +112,16 @@ footer{
     margin-top: 20px;
 
     header {
-        font-size: 30px;
-        font-family: "Space Grotesk", sans-serif;
+        font-size: 40px;
+        font-family: "Homemade Apple", cursive;
         font-weight: bold;
-        color: #9F4170;
-        background-color: transparent;
+        letter-spacing: 1px;
+        background-color: #FBF3FF;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.75);
     }
 
     #project-filter-btns {
@@ -123,7 +130,7 @@ footer{
         gap: 10px;
         position: absolute;
         left: 0;
-        margin-left: 3%;
+        margin-left: 5%;
 
         .filter-button {
             width: 150px;
@@ -332,41 +339,6 @@ footer{
             font-size: 16px;
             font-family: "Space Grotesk", sans-serif;
         }
-
-        /* button {
-            font-family: "Space Grotesk", sans-serif;
-            border-radius: 10px;
-            border: 2px solid #1f1f1f;
-            background-color: #1f1f1f;
-            color: white;
-            font-size: 1.3em;
-            font-weight: bold;
-            padding: 10px;
-            margin-top: 20px;
-            width: 80%;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            cursor: pointer;
-            border: 2px solid #af4fb8;
-            background-color: #FBF3FF;
-            font-weight: bold;
-            color: #af4fb8;
-            transition: all 0.3s ease;
-        } */
-
-        #form-social-icons {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        svg {
-            font-size: 30px;
-            color: #8E7AB3
-        }
-
     }
 }
     
@@ -377,6 +349,8 @@ footer{
 /* Single Page Styling */
 .single-page {
     margin: 30px;
+    display: flex;
+    flex-direction: column;
 
     .backbtn-title {
         display: flex;
@@ -384,17 +358,10 @@ footer{
         margin-bottom: 30px;
 
         .back-button {
-            border-radius: 20px;
-            padding: 10px;
-            background-color: #9F4170;
-            border: none;
-            font-family: "Inter", sans-serif;
+            
             text-align: center;
-            color: white;
             width: 100px;
             margin-top: 10px;
-            font-size: 16px;
-            cursor: pointer;
         }
 
         h2 {
@@ -406,59 +373,56 @@ footer{
     }
 
     .single-project-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10%;
+        display: flex;
+        justify-content: center;
+        gap: 20%;
 
-        .project-image-link {
+        .project-image-and-link {
             display: flex;
             flex-direction: column;
-            font-family: "Inter", sans-serif;
+            background-color: #FBF3FF;
+            border-radius: 8px;
+            padding: 20px;
 
-            img {
-                width: 100%;
-                object-fit: cover;
-                border-radius: 8px;
+            .image-cont {
+                width: 400px;
+                
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
             }
 
             a {
                 margin: 10px;
-                font-family: "Lalezar", system-ui;
+                font-family: "Space Grotesk", sans-serif;
                 color: #9F4170;
             }
         }
 
-        .project-details {
+        .project-detail-card {
+            background-color: #FBF3FF;
+            width: 700px;
+            padding: 50px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px;
-            height: 70%;
+            gap: 20px;
             border-radius: 8px;
-            background-color: #FBF3FF;
-
-            p {
-                font-family: "Inter", sans-serif;
-            }
+            font-family: "Space Grotesk", sans-serif;
 
             h3 {
                 font-size: 2em;
-                font-family: "Lalezar", system-ui;
+                font-weight: bold;
             }
 
             h4 {
-                font-size: 1.5em;
-                font-family: "Lalezar", system-ui;
-            }
-
-            .social-icons {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 2em;
+                font-size: 1.4em;
             }
         }
+
+
+        
     }
 }
 
