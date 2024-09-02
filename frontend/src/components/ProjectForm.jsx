@@ -119,7 +119,7 @@ const ProjectForm = () => {
         </div>
         
         <div className='form-inputs'>
-            <label>Link to Portfolio:</label>
+            <label>Link to Project:</label>
             <input
                 type="text"
                 onChange={(e) => setLink(e.target.value)}
