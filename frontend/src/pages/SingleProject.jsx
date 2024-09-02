@@ -47,26 +47,33 @@ const SingleProject = () => {
 
         <div className='single-project-content'>
 
-            <div className='project-image-link'>
+            <div className="project-image-and-link">
+                <div className="image-cont">
                 <img src={`${baseURL}/public/uploads/${project.image}`} alt="photo of project here" />
+                </div>
                 {project.link && <a href={project.link} target="_blank"> {project.link} </a>}     
+
             </div>
 
-            <div className='project-details'>
+            <div className="project-detail-card">
                 <h3> Web Design </h3>
-
-                <h4> Project Author(s): </h4>
-                <p> {project.author} </p>
-
-                {/* in depth description of project */}
+                <div className="project-author-cont">
+                    <h4> Project Author(s) </h4>
+                    <p> {project.author} </p>
+                </div>
                 <p> {project.bDescription} </p>
-
+                <div className="project-date">
                 <h4> Uploaded/Created:</h4> 
-                <h4> Socials: </h4>
-                <div className='social-icons'>
-                    <FaInstagram/>
-                    <FaFacebook/>
-                    <FaLinkedin/>
+                    {/* time stamp here */}
+                </div>
+
+                <div className="project-socials">
+                    <h4> Socials: </h4>
+                    <div className='social-icons'>
+                        <FaInstagram/>
+                        <FaFacebook/>
+                        <FaLinkedin/>
+                    </div>
                 </div>
             </div>
 
