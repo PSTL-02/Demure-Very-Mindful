@@ -14,8 +14,10 @@ const Login = () => {
     }
 
     return (
-             <form className="login" onSubmit={handleSubmit}>
-            <h2> Log In </h2>
+        <>
+        <h1 className="site-title"> 2402 Class Portfolio </h1>
+        <form className="login" onSubmit={handleSubmit}>
+            <h3> Log In </h3>
 
             <label> Email: </label>
             <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
@@ -26,6 +28,7 @@ const Login = () => {
             <button disabled={isLoading}> Log In </button>
             {error && <div className="error"> {error} </div>}
         </form>
+        </>
     )
 }
 
