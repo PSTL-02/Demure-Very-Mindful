@@ -36,7 +36,6 @@ const Home = () => {
             <button onClick={handleMyProjects} className="filter-button"> My Projects </button>
             <button onClick={handleAllProjects} className="filter-button"> All Projects </button>
             </div>
-        <header>2402 Portfolio Work</header>
         </div>
         
         <div className="home-posts">

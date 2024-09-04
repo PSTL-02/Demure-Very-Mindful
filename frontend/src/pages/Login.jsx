@@ -15,7 +15,6 @@ const Login = () => {
 
     return (
         <>
-        <h1 className="site-title"> 2402 Class Portfolio </h1>
         <form className="login" onSubmit={handleSubmit}>
             <h3> Log In </h3>
 
