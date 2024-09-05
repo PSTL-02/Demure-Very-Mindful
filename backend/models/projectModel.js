@@ -20,12 +20,9 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
-    sDescription: {
+    description: {
         type: String,
         required: true
-    },
-    bDescription: {
-        type: String
     },
     socials: {
         type: String

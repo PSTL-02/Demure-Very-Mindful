@@ -13,7 +13,35 @@ const Navbar = () => {
   return (
     <header>
         <div className='container'>
-            <Link to='/'>
+
+          {/* left side */}
+          <div className='logo-header'>
+          <Link to='/'>
+            <img src="/images/demure-high-resolution-logo-black-transparent.png" alt="our-logo"/>
+            </Link>
+            <h1> 2402 Class Portfolio </h1>
+          </div>
+
+          {/* right side */}
+          <div className='right-side'>
+          {user && <div className=' userInt'>
+                <span>{user.email}</span>
+                <button onClick={handleClick} className='Logout-btn'>Logout</button>
+              </div>}
+
+
+              {!user && <div className='login-logout'>
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Sign Up</Link>
+              </div>}
+          </div>
+        </div>
+
+
+
+
+        {/* <div className='container'>
+          <Link to='/'>
             <img src="/images/demure-high-resolution-logo-black-transparent.png" alt="our-logo"/>
             </Link>
             <nav>
@@ -28,7 +56,7 @@ const Navbar = () => {
                 <Link to='/signup'>Sign Up</Link>
               </div>}
             </nav>
-        </div>
+        </div> */}
     </header>
   )
 }

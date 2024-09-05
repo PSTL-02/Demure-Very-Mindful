@@ -12,8 +12,7 @@ const ProjectForm = () => {
    
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
-    const [sDescription, setSDescription] = useState('');
-    const [bDescription, setBDescription] = useState('');
+    const [description, setDescription] = useState('');
     const [link, setLink] = useState('');
     const [error, setError] = useState(null);
    
@@ -27,8 +26,7 @@ const ProjectForm = () => {
         const formData = new FormData()
         formData.append('title', title);
         formData.append('author', author);
-        formData.append('sDescription', sDescription);
-        formData.append('bDescription', bDescription);
+        formData.append('description', description);
         formData.append('link', link);
         formData.append('user_id', user_id);
         formData.append('image', image);
@@ -42,8 +40,7 @@ const ProjectForm = () => {
             })
             setTitle('');
             setAuthor('');
-            setSDescription('');
-            setBDescription('');
+            setDescription('');
             setLink('');
             setError(null);
             console.log('new project added', response.data);
@@ -68,7 +65,7 @@ const ProjectForm = () => {
         
         <div className='form-inputs'>
             <label>Type:</label>
-            <h4>Web Design</h4>
+            <h4 className='form-type'>Web Design</h4>
         </div>
         
         <div className='form-inputs'>
@@ -81,20 +78,13 @@ const ProjectForm = () => {
         </div>
         
         <div className='form-inputs'>
-            <label>Small Description:</label>
+            <label>Description:</label>
             <input
                 type="text"
-                onChange={(e) => setSDescription(e.target.value)}
-                value={sDescription}
-            />
-        </div>
-        
-        <div className='form-inputs'>
-            <label>Big Description:</label>
-            <input
-                type="text"
-                onChange={(e) => setBDescription(e.target.value)}
-                value={bDescription}
+                onChange={(e) => setDescription(e.target.value)}
+                value={description}
+                placeholder='Max 50 Characters'
+                maxLength={50} 
             />
         </div>
         

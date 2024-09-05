@@ -16,7 +16,6 @@ const SignUp = () => {
 
   return (
     <>
-      <h1 className="site-title"> 2402 Class Portfolio </h1>
 
       <form className='signup' onSubmit={handleSubmit}>
         <h3> Sign Up </h3>

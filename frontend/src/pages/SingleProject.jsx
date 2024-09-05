@@ -61,10 +61,10 @@ const SingleProject = () => {
                     <h4> Project Author(s) </h4>
                     <p> {project.author} </p>
                 </div>
-                <p> {project.bDescription} </p>
+                <p> {project.description} </p>
                 <div className="project-date">
                 <h4> Uploaded/Created:</h4> 
-                    {/* time stamp here */}
+                <p>{formatDistanceToNow(new Date(project.createdAt), { addSuffix: true })}</p>
                 </div>
 
                 <div className="project-socials">
