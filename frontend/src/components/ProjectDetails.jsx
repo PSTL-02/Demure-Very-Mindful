@@ -23,8 +23,7 @@ const ProjectDetails = ({project}) => {
 
   const [editTitle, setEditTitle] = useState(project.title);
   const [editAuthor, setEditAuthor] = useState(project.author);
-  const [editSDescription, setEditSDescription] = useState(project.sDescription);
-  const [editBDescription, setEditBDescription] = useState(project.bDescription);
+  const [editDescription, setEditDescription] = useState(project.description);
   const [editLink, setEditLink] = useState(project.link);
 
   
@@ -82,8 +81,7 @@ const ProjectDetails = ({project}) => {
     const updatedProject = {
       title: editTitle,
       author: editAuthor,
-      sDescription: editSDescription,
-      bDescription: editBDescription,
+      description: editDescription,
       link: editLink
     };
 
@@ -108,8 +106,7 @@ const ProjectDetails = ({project}) => {
   const handleCancelEdit = () => {
     setEditTitle(project.title);
     setEditAuthor(project.author);
-    setEditSDescription(project.sDescription);
-    setEditBDescription(project.bDescription);
+    setEditDescription(project.description);
     setEditLink(project.link);
     setIsEditing(false);
   };
@@ -136,11 +133,8 @@ const ProjectDetails = ({project}) => {
           <label> Edit Project Author: </label>
           <input type='text' value={editAuthor} onChange={(e) => setEditAuthor(e.target.value)}/>
 
-          <label> Edit Small Description: </label>
-          <input type='text' value={editSDescription} onChange={(e) => setEditSDescription(e.target.value)}/>
-
-          <label> Edit Big Description: </label>
-          <input type='text' value={editBDescription} onChange={(e) => setEditBDescription(e.target.value)}/>
+          <label> Edit Description: </label>
+          <input type='text' value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
 
           <label> Edit Portfolio Link: </label>
           <input type='text' value={editLink} onChange={(e) => setEditLink(e.target.value)}/>
@@ -156,7 +150,7 @@ const ProjectDetails = ({project}) => {
           )}
             <div className='details'>
             <h4 id='project-title'> {project.title} </h4>
-            <p>{project.sDescription} </p>
+            <p>{project.description} </p>
             <p> <strong> Created By: </strong> {project.author} </p>
             <p id='time-created'> {formatDistanceToNow(new Date(project.createdAt), {includeSeconds: true}, {addSuffix: true})} ago </p>
             <div className='btn-icons'>
