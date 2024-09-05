@@ -34,13 +34,7 @@ const ProjectForm = () => {
         formData.append('image', image);
 
 
-        // HTTP Request:
         try {
-            // const response = await axios.post(`${baseURL}/api/projects/`, project, {
-            //     headers : {
-            //         'Content-Type': 'application/json'
-            //     }
-            // });
             const response = await axios.post(`${baseURL}/api/projects/`, formData, {
                 headers : {
                     'Content-Type': 'multipart/form-data'
